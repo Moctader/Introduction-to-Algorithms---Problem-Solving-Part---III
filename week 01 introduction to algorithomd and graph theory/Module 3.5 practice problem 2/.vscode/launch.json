@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/moctader/Phitron/Introduction to Algorithms & Problem Solving Part - III/week 01 introduction to algorithomd and graph theory/Module 3.5 practice problem 2",
+      "program": "/Users/moctader/Phitron/Introduction to Algorithms & Problem Solving Part - III/week 01 introduction to algorithomd and graph theory/Module 3.5 practice problem 2/build/Debug/outDebug"
+    }
+  ]
+}
