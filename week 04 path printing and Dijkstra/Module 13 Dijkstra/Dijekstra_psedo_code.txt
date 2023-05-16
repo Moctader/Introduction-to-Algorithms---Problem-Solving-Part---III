@@ -1,0 +1,20 @@
+
+
+
+-create a distance array "d"
+-initialize all value of "d" to infinty
+-d[src]=0
+-create a visited array and mark all nodes as unvisited
+
+-for i=0 to n-1:
+    -pick the "unvisited" node with minimum d[node]
+    -visited[node]=1
+    for all adj_node of node:
+        if d[node]+c(node, adj_node)<d[adj_node]:
+        d[adj_node]=d[node]+c(node, adj_node)
+
+
+
+
+    w
+u ------->v
