@@ -11,7 +11,7 @@
 #include<vector>
 #include<queue>
 
-using namespace std;
+using namespace std; 
 const int N=2000;
 vector<int>adjlist[N];
 int visited[N];
