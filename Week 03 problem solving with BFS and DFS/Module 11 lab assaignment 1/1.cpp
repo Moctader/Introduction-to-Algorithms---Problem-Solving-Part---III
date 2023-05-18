@@ -1,3 +1,12 @@
+/*
+
+0 0 1 1 0 0
+0 0 1 1 0 1
+1 1 0 0 1 0
+1 1 0 0 0 1
+0 0 1 0 0 1
+0 1 0 1 1 0
+*/
 #include<iostream>
 #include<vector>
 using namespace std;
