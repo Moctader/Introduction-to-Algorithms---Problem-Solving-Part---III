@@ -1,0 +1,37 @@
+1. start by initialize the distances to all nodes as infinity, except for the source 
+node E which is set to zero.
+
+2. Create a priority queue(min-heap)to store nodes with their tentative distances
+initially enqueue the E node with a distance of 0.
+
+3. untill the priority queue is not empty
+    Dequeue E node with the minimum tenative distance from the priority queue
+    and it's current node.
+
+    this current has already been visited and the E nodes distance is 0.
+
+    for each neighbour of the current node calculate the tenative distance
+    from the source node. if this distance is smaller than the previously recorded
+    distance. update the distance by d[selected_node]+cost(selected_node, adj_node)<d[adj_node]
+    then d[adj_node]=d[selected_node]+cost(selected_node,adj_node);
+
+    enqueue the updated distance and the neighbour into the priority queue.
+
+    Repeat the process untill priority empty,
+
+4. After the algorithom finnishes the distance recorded for the each node represents the 
+shortest distance from the source node to the particular node.
+
+The update shortest distance of the all node from the source node will be:
+
+E=0.
+G=5
+F=6
+H=27
+B=12
+J=15
+C=9
+A=10
+I=21
+
+

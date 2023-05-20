@@ -102,7 +102,7 @@ int main()
             {
                 src={i, j};
             }
-            else if (s[j]=='B')
+            else if (s[j]!='M')
             {
                 dst={i, j};
             }

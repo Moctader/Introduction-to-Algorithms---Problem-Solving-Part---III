@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-const int N=2e5;
+const int N=1000;
 vector<int>adjList[N];
 int visited[N];
 int parent[N];
