@@ -1,0 +1,27 @@
+What is Topological Sort?Explain with Example.	
+
+Topological sort is an algorithm used to order the vertics of a directed acylic
+graph(DAG)in such a way that for every directed edge (u,v) vertex u comes before
+vertex v in the ordering. 
+
+The Topological sort algorithm works by repeatedly selecting a vertex with no incoming
+edges and adding it to the sorted order. This process continues untill all
+vertics have been include in the ordering or it determined that the graph contains
+a cycle.
+
+For  Example: a Topological sorting of the following graph is "5 4 2 3 1 0".
+There can be more than one Topological sorting for a graph. Another Topological
+sorting of the following graph is "4 5 2 3 1 0". The first vertex in Topological
+sorting is always a vertex with an in degree of 0( a vertex with no incoming edges)
+
+            
+
+
+
+
+//Can a topological sort be implemented in a Directed cyclic graph (DCG)?
+If so, explain How would you do it?	
+
+No, a topological sort cannot be implemented in a Directed cyclic Graph(DCG).
+The main requirement for a topological sort is that the graph must be a directed
+acylic Graph(DAG). Meaning it should not contain any cycle.

@@ -1,0 +1,35 @@
+a) Write pseudocode for Dijkstra's algorithm? (Naive Approach)  
+
+-create a distance array "d"
+-Initialize all the value of "d" to infinity
+-d[src]=0
+-create a visited array and mark all the node as unvisited
+
+for i=0 to n-1;
+    -pick the "unvisited" node with minimum distance d[node]
+    -visited[node]=1
+    for all adj_node of node:
+        if d[node]+c(node,adj_node)<d[adj_node]
+        d[adj_node]=d[node]+c(node,adj_node)
+
+
+b)The dijkstra algorithom widely used for finding shortest path in a graph
+does have several limitations
+
+ 1. Inability to handle negative weighted edges: The dijkstra algorithm assume 
+ that all the weights in a graph non-negative. This assumtions is crucial
+ for the correctness of the algorithm. if the graph contains negative weighted 
+ edges the algorithm can produce incorrect result or fail to teminate.
+
+ 2. Inefficiency for large graphs: The dijkstra algorithm has time complexity
+ of O((V+E)logV), where V is the number of vertics and E is the number of edges
+ in the graph. While this time complexity is efficient for the small or
+ moderately sized graphs. It can become a bottleneck for large graphs with 
+ millions of vertics and edges.
+
+ 3. Inability of handle graphs with infinite and unknown distances: Dijkstra
+ algorithm assume that all distances between vertics are finite and known.if 
+ the graph contains edges with infinite oor unknown distances, the algorithm
+ may not terminate or produce incorrect results. for Example if there is a cycle
+ with negative totall weight in the graph. the algorithm can get stuck in 
+ infinite loop.

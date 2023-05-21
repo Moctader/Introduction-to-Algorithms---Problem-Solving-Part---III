@@ -1,0 +1,27 @@
+Directed cyclic graoh(DCG) and directed acylic graph(DAG) are both type of directed graph. But they
+have significantly differences in terms of their structure and properties. Herer are three key
+differences:
+
+1. Cycles vs No Cycles: The most fundamental differences between DCG's and DAG's is the 
+presence and absence of cycles. A DCG is a directed graph that contain at least one cycle.
+meaning that there is a path that leads back to a vertex itself. in contrast a DAG is a 
+directed graph that doesn't have any cycles, ensuring that there is no loop back to vertex.
+The absence of cycles in DAG's that makes them particular useful in various applications,
+such as representing dependencies or precedence relationship.
+
+2. Reachability and path properties: Due to the presence of the cycles, DCG's exhbits 
+different reachibilty or path properties compare to the DAG's. It is possible to have
+cyclic paths where revisit vertex multiple times. This cyclic nature can leads to complex
+reachibilty patterns, where a vertex can be reacheble from itself or from multiple paths.
+in contrast DAG has well defined reachibilty properties.Each vertex in a DAG can only
+be reached by following a directed path, and there are no cycles to complicate the reachibilty
+relationships.
+
+
+Topological sorting: Topological sorting is a process of linearly ordering the vertics
+of a directed graph such that for every directed edge(u,v), vertex u comes before vertex
+v in the ordering. DAGs have useful property called a topological order, which is allows 
+for the efficient topological sorting. This properties allows the algorithm to process the
+vertics in a systematic manner, considering the dependencies between them. In DCG's the presence of
+the cyclic order prevents the existence of a topological order, making topological sorting
+impossible.

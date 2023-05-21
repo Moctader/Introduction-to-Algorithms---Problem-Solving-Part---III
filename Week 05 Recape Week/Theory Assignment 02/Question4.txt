@@ -1,0 +1,39 @@
+In a recursive function, the base case serves as the termination condition that stops
+the recursive calls and allows function to returning values. It provides a stopping
+point for  the recursion and defines the simplest scenario where the function's logic
+can be directly applied without further recursive calls.
+
+The purpose of the base case in a recursive function is to prevent infinite recursion
+or a endless loop. withour a base case, the recursive functionwould continue making 
+recursive call indifinitely, leading to a stack overflowerror of consuming excussive computional
+resources. This is beacuse each recursive calls add new frame to the call stck, and without
+a base case to stop the recursion, the call stack would keep growing untill exceeds it's limit.
+
+including a base case ensures that the recursion eventually reaches a point where it stops
+and starts unwinding the stack. returning vallues from each recursive call untill the initialize
+call is reached. The base casee provides a condition that allows the function to return
+a result directly without making further recursive calls.
+
+
+What is recursion, and how is it different from iteration?	
+
+recursion: recursion is a programming techinque where a function call itself directly or
+indirectly.
+
+Iteration: iteration on the other hand is a programming construct that allows repettive 
+excutionof a block of code.
+
+Difference between recursion and iteration:
+
+1. control flow: recursion involve dividing a problem into smaller subproblems and
+solving them making recursive calls. The control flow jums to different instances of
+the same function.In cntrast itertion flows a linear control flow, excuting a same block
+of code until a condition met.
+
+2. Function calls: recursion rellies on function calls to solve the problem. with each 
+call reducing the problem size. in iteration the code block id excuted repeatedly
+within a loop construct, without making additional functions calls.
+
+3. Problem Decomposition: recursion decompose a problem by breaking down it into a small
+subproblems, iteration typically doesnot decompose a problem. it repeatedly excute the same
+block of code.

@@ -1,0 +1,16 @@
+What is a bipartite graph?        	
+
+A bipartite graph also called a bigraph, is a set of graph vertices decompose into two
+disjoint sets such that no two graph vertices within the same set are adjacent.
+
+How can you detect whether a graph is bipartite?	
+
+A bipartite graph is a graph whose vertices can be divided intotwo independent 
+sets U, V such that every edge(u,v) either connects a vertex from U to V or a vertex
+from V to U. In other words, for every edge (u,v) either u belongs to U and v velongs to v
+or u belongs to V or v belongs to U. We can also say that there is no edge that connects
+vertices of same set.
+
+A bipartite graph is possible if the graph coloring is possible using two color such that
+vertices in a set are colored with same color. Note that it is possible to color a cycle
+graph with even cycle using two colors.
