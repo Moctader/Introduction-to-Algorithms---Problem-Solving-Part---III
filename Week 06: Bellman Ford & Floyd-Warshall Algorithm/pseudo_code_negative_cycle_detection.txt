@@ -1,0 +1,16 @@
+
+-create a distance array "d" with all values to infinity
+-d[src]=0;
+
+-negative_cycle=false;
+
+-for i=1 to i<=n:
+    -for all edges e(u,v,w)
+        -if d[u]+w<d[v]
+            -d[v]=d[u]+w;
+            -if i==N
+                -negative_cycle=true
+
+
+-print whether negative cycle Exist
+-print the distance array "d"

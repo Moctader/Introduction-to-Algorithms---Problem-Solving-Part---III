@@ -1,0 +1,17 @@
+
+
+
+
+
+
+-Create a distance array "d" with all values to infinity
+-d[src]=0;
+-for i=1 to n-1:
+    -if d[u]+c(u,v)<d[v]
+        d[v]=d[u]+c(u,v)
+
+
+print the the distance array "d"
+
+
+Time complexity =(n^3) beacuse of handeling negative values
