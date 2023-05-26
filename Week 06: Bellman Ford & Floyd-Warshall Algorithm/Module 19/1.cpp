@@ -2,14 +2,15 @@
 #include<vector>
 using namespace std;
 
+int inf =1e5;
 const int N=1000;
-int inf=1e5;
 int d[N];
 vector<pair<int, int>>adjl[N];
 
+
+
 int main()
 {
-    //All values markes as infinity
     int n, m;
     cin>>n>>m;
     for(int i=1; i<=n; i++)
@@ -17,22 +18,20 @@ int main()
         d[i]=inf;
     }
 
-    // input of the edges;
     for(int i=1; i<=m; i++)
     {
-        int u, v,w;
+        int u, v, w;
         cin>>u>>v>>w;
         adjl[u].push_back({v,w});
+
     }
 
-
-    //Negative cycle detection
     bool negative_cycle=false;
     for(int i=1; i<=n; i++)
     {
         for(int node=1; node<=n; node++)
         {
-            for(auto adj_node: adjl[node])
+            for(auto adj_node:adjl[node])
             {
                 int u=node;
                 int v=adj_node.first;
@@ -40,43 +39,28 @@ int main()
 
                 if (d[u]+w<d[v])
                 {
-                   d[v]=d[u]+w;
-                   if (i==n)
-                   {
+                    d[v]=d[u]+w;
+                    if (i==n)
+                    {
                         negative_cycle=true;
-                   }
-                   
+                    }
+                    
                 }
                 
             }
         }
     }
 
-    //Results printed accorfing to the negative cycle
     if (negative_cycle)
     {
-        cout<<"Graph has negative cycle";
+        cout<<"YES";
     }
     else
     {
-        for(int i=1; i<=n; i++)
-        {
-            cout<<d[i]<<" ";
-        }
+        cout<<"NO";
     }
     
+
+
     return 0;
 }
-
-
-/*
-
-5 7
-4 1 2
-1 2 3
-2 4 8
-1 3 2
-4 5 2
-2 5 5
-2 3 1
-*/
