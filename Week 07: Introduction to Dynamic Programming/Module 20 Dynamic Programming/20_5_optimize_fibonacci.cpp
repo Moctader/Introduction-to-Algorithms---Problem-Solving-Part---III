@@ -22,7 +22,7 @@ ll fib(int x)
 
 int main()
 {
-    cout<<fib(2)<<endl;
+    cout<<fib(7)<<endl;
 
     return 0;
 }
