@@ -2,10 +2,10 @@
 #include<vector>
 using namespace std;
 int nodes, edges;
-const int N=1e5+5;
+const int N=1e1+5;
 int visited[N];
 int d[N];
-int infinty=1e9;
+int infinty=1e2;
 vector<pair<int, int>>adjlist[N];
 
 void djkstra(int src)

@@ -15,12 +15,12 @@ ll solve(int n, int m, vector<vector<char>>&grid, vector<vector<ll>>&dp)
         return dp[n][m];
     }
     int ans=0;
-    if (n>0 && grid[n][m]!='#')
+    if (n>0 && grid[n][m]!='*')
     {
         ans=ans+solve(n-1,m,grid,dp)%MOD;
     }
     
-    if (m>0 && grid[n][m]!='#')
+    if (m>0 && grid[n][m]!='*')
     {
         ans=ans+solve(n, m-1,grid,dp)%MOD;
     }
@@ -31,21 +31,24 @@ ll solve(int n, int m, vector<vector<char>>&grid, vector<vector<ll>>&dp)
 
 int main()
 {
-    int n, m;
-    cin>>n>>m;
-    vector<vector<char>>grid(n, vector<char>(m, 'a'));
+    int n;
+    cin>>n;
+    vector<vector<char>>grid(n, vector<char>(n, 'a'));
 
     for(int i=0; i<n; i++)
     {
-        for(int j=0; j<m; j++)
+        for(int j=0; j<n; j++)
         {
             cin>>grid[i][j];
         }
     }
 
-    vector<vector<ll>>dp(n+5, vector<ll>(m+5, -1));
+  
 
-    cout<<solve(n, m, grid, dp);
+    vector<vector<ll>>dp(n+5, vector<ll>(n+5, -1));
+    int l=grid.size();
+    int k=grid[0].size();
+   cout<<solve(l-1, k-1, grid, dp);
     
     return 0;
 }
