@@ -32,7 +32,7 @@ int LCS(int i, int j)
     
 }
 
-int main()
+int main() 
 {
     cin>>s>>t;
     n=s.size();
